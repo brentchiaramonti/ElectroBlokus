@@ -1,0 +1,241 @@
+package gui;
+
+public class CreatePieces {
+	
+	public static Piece createSingle() {
+		Piece singleP = new Piece();
+		singleP.getPieceType()[0][2] = 1;
+		singleP.getPointOfReference()[0] = 0;
+		singleP.getPointOfReference()[1] = 2;
+		return singleP;
+	}
+	
+	public static Piece createDouble() {
+		Piece doubleP = new Piece();
+		doubleP.getPieceType()[0][1] = 1;
+		doubleP.getPieceType()[0][2] = 1;
+		doubleP.getPointOfReference()[0] = 0;
+		doubleP.getPointOfReference()[1] = 2;
+		return doubleP;
+	
+	}
+	
+	public static Piece createTriple() {
+		Piece tripleP = new Piece();
+		tripleP.getPieceType()[0][1] = 1;
+		tripleP.getPieceType()[0][2] = 1;
+		tripleP.getPieceType()[1][2] = 1;
+		tripleP.getPointOfReference()[0] = 0;
+		tripleP.getPointOfReference()[1] = 1;
+		return tripleP;
+	}
+	
+	public static Piece createTriple2() {
+		Piece tripleP = new Piece();
+		tripleP.getPieceType()[0][1] = 1;
+		tripleP.getPieceType()[0][2] = 1;
+		tripleP.getPieceType()[0][3] = 1;
+		tripleP.getPointOfReference()[0] = 0;
+		tripleP.getPointOfReference()[1] = 1;
+		return tripleP;
+	}
+	
+	public static Piece createQuad1() {
+		Piece quadP1 = new Piece();
+		quadP1.getPieceType()[0][1] = 1;
+		quadP1.getPieceType()[0][2] = 1;
+		quadP1.getPieceType()[1][1] = 1;
+		quadP1.getPieceType()[1][2] = 1;
+		quadP1.getPointOfReference()[0] = 0;
+		quadP1.getPointOfReference()[1] = 1;
+		return quadP1;
+	}
+	
+	public static Piece createQuad2() {
+		Piece quadP1 = new Piece();
+		quadP1.getPieceType()[0][2] = 1;
+		quadP1.getPieceType()[1][1] = 1;
+		quadP1.getPieceType()[1][2] = 1;
+		quadP1.getPieceType()[1][3] = 1;
+		quadP1.getPointOfReference()[0] = 0;
+		quadP1.getPointOfReference()[1] = 2;
+		return quadP1;
+	}
+	
+	public static Piece createQuad3() {
+		Piece quadP1 = new Piece();
+		quadP1.getPieceType()[0][0] = 1;
+		quadP1.getPieceType()[0][1] = 1;
+		quadP1.getPieceType()[0][2] = 1;
+		quadP1.getPieceType()[0][3] = 1;
+		quadP1.getPointOfReference()[0] = 0;
+		quadP1.getPointOfReference()[1] = 0;
+		return quadP1;
+	}
+	
+	public static Piece createQuad4() {
+		Piece quadP1 = new Piece();
+		quadP1.getPieceType()[0][2] = 1;
+		quadP1.getPieceType()[1][0] = 1;
+		quadP1.getPieceType()[1][1] = 1;
+		quadP1.getPieceType()[1][2] = 1;
+		quadP1.getPointOfReference()[0] = 0;
+		quadP1.getPointOfReference()[1] = 2;
+		return quadP1;
+	}
+	
+	public static Piece createQuad5() {
+		Piece quadP1 = new Piece();
+		quadP1.getPieceType()[0][2] = 1;
+		quadP1.getPieceType()[0][3] = 1;
+		quadP1.getPieceType()[1][1] = 1;
+		quadP1.getPieceType()[1][2] = 1;
+		quadP1.getPointOfReference()[0] = 1;
+		quadP1.getPointOfReference()[1] = 1;
+		return quadP1;
+	}
+	
+	public static Piece createPent1() {
+		Piece pentP = new Piece();
+		pentP.getPieceType()[0][1] = 1;
+		pentP.getPieceType()[1][1] = 1;
+		pentP.getPieceType()[1][2] = 1;
+		pentP.getPieceType()[1][3] = 1;
+		pentP.getPieceType()[1][4] = 1;
+		pentP.getPointOfReference()[0] = 0;
+		pentP.getPointOfReference()[1] = 1;
+		return pentP;
+	}
+	
+	public static Piece createPent2() {
+		Piece pentP = new Piece();
+		pentP.getPieceType()[0][2] = 1;
+		pentP.getPieceType()[1][2] = 1;
+		pentP.getPieceType()[2][2] = 1;
+		pentP.getPieceType()[2][1] = 1;
+		pentP.getPieceType()[2][3] = 1;
+		pentP.getPointOfReference()[0] = 0;
+		pentP.getPointOfReference()[1] = 2;
+		return pentP;
+	}
+
+	public static Piece createPent3() {
+		Piece pentP = new Piece();
+		pentP.getPieceType()[0][2] = 1;
+		pentP.getPieceType()[1][2] = 1;
+		pentP.getPieceType()[2][2] = 1;
+		pentP.getPieceType()[2][3] = 1;
+		pentP.getPieceType()[2][4] = 1;
+		pentP.getPointOfReference()[0] = 0;
+		pentP.getPointOfReference()[1] = 2;
+		return pentP;
+	}
+	
+	public static Piece createPent4() {
+		Piece pentP = new Piece();
+		pentP.getPieceType()[0][2] = 1;
+		pentP.getPieceType()[1][2] = 1;
+		pentP.getPieceType()[1][1] = 1;
+		pentP.getPieceType()[0][3] = 1;
+		pentP.getPieceType()[0][4] = 1;
+		pentP.getPointOfReference()[0] = 1;
+		pentP.getPointOfReference()[1] = 1;
+		return pentP;
+	}
+	
+	public static Piece createPent5() {
+		Piece pentP = new Piece();
+		pentP.getPieceType()[0][2] = 1;
+		pentP.getPieceType()[1][2] = 1;
+		pentP.getPieceType()[1][1] = 1;
+		pentP.getPieceType()[1][0] = 1;
+		pentP.getPieceType()[2][0] = 1;
+		pentP.getPointOfReference()[0] = 0;
+		pentP.getPointOfReference()[1] = 2;
+		return pentP;
+	}
+	
+	public static Piece createPent6() {
+		Piece pentP = new Piece();
+		pentP.getPieceType()[0][2] = 1;
+		pentP.getPieceType()[1][2] = 1;
+		pentP.getPieceType()[2][2] = 1;
+		pentP.getPieceType()[3][2] = 1;
+		pentP.getPieceType()[4][2] = 1;
+		pentP.getPointOfReference()[0] = 0;
+		pentP.getPointOfReference()[1] = 2;
+		return pentP;
+	}
+	
+	public static Piece createPent7() {
+		Piece pentP = new Piece();
+		pentP.getPieceType()[0][2] = 1;
+		pentP.getPieceType()[1][2] = 1;
+		pentP.getPieceType()[2][2] = 1;
+		pentP.getPieceType()[1][3] = 1;
+		pentP.getPieceType()[2][3] = 1;
+		pentP.getPointOfReference()[0] = 0;
+		pentP.getPointOfReference()[1] = 2;
+		return pentP;
+	}
+	
+	public static Piece createPent8() {
+		Piece pentP = new Piece();
+		pentP.getPieceType()[0][2] = 1;
+		pentP.getPieceType()[0][3] = 1;
+		pentP.getPieceType()[1][2] = 1;
+		pentP.getPieceType()[1][1] = 1;
+		pentP.getPieceType()[2][1] = 1;
+		pentP.getPointOfReference()[0] = 0;
+		pentP.getPointOfReference()[1] = 3;
+		return pentP;
+	}
+	
+	public static Piece createPent9() {
+		Piece pentP = new Piece();
+		pentP.getPieceType()[0][2] = 1;
+		pentP.getPieceType()[0][1] = 1;
+		pentP.getPieceType()[1][1] = 1;
+		pentP.getPieceType()[2][1] = 1;
+		pentP.getPieceType()[2][2] = 1;
+		pentP.getPointOfReference()[0] = 0;
+		pentP.getPointOfReference()[1] = 2;
+		return pentP;
+	}
+	
+	public static Piece createPent10() {
+		Piece pentP = new Piece();
+		pentP.getPieceType()[0][2] = 1;
+		pentP.getPieceType()[0][3] = 1;
+		pentP.getPieceType()[1][2] = 1;
+		pentP.getPieceType()[1][1] = 1;
+		pentP.getPieceType()[2][2] = 1;
+		pentP.getPointOfReference()[0] = 0;
+		pentP.getPointOfReference()[1] = 3;
+		return pentP;
+	}
+	
+	public static Piece createPent11() {
+		Piece pentP = new Piece();
+		pentP.getPieceType()[0][2] = 1;
+		pentP.getPieceType()[1][2] = 1;
+		pentP.getPieceType()[2][2] = 1;
+		pentP.getPieceType()[1][1] = 1;
+		pentP.getPieceType()[1][3] = 1;
+		pentP.getPointOfReference()[0] = 0;
+		pentP.getPointOfReference()[1] = 2;
+		return pentP;
+	}
+	
+	public static Piece createPent12() {
+		Piece pentP = new Piece();
+		pentP.getPieceType()[0][2] = 1;
+		pentP.getPieceType()[1][2] = 1;
+		pentP.getPieceType()[1][1] = 1;
+		pentP.getPieceType()[1][3] = 1;
+		pentP.getPieceType()[1][4] = 1;
+		pentP.getPointOfReference()[0] = 0;
+		pentP.getPointOfReference()[1] = 2;
+		return pentP;
+	}
+}

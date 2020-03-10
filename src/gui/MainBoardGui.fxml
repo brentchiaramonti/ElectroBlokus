@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1000.0" style="-fx-background-color: lightgray;" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.MainBoardController">
+   <children>
+      <MenuButton fx:id="File" mnemonicParsing="false" text="File">
+        <items>
+          <MenuItem fx:id="resetButton" mnemonicParsing="false" onAction="#resetGame" text="Reset" />
+          <MenuItem fx:id="rulesButton" mnemonicParsing="false" onAction="#openRulesPage" text="Rules" />
+        </items>
+      </MenuButton>
+      <Pane fx:id="buttonPane" layoutX="32.0" layoutY="31.0" prefHeight="600.0" prefWidth="600.0" />
+      <ScrollPane layoutX="-1.0" layoutY="654.0" prefHeight="245.0" prefWidth="1000.0">
+         <content>
+            <HBox fx:id="blocksChoiceDisplay" prefHeight="220.0" prefWidth="2000.0">
+            </HBox>
+         </content>
+      </ScrollPane>
+      <Pane fx:id="seletedPiecePane" layoutX="719.0" layoutY="320.0" prefHeight="195.0" prefWidth="192.0" />
+      <Label layoutX="752.0" layoutY="248.0" text="Selected Piece" />
+      <Button fx:id="rotateLeftButton" layoutX="670.0" layoutY="281.0" mnemonicParsing="false" onAction="#rotateLeft" prefHeight="31.0" prefWidth="95.0" text="Rotate Left" />
+      <Button fx:id="flipButton" layoutX="778.0" layoutY="281.0" mnemonicParsing="false" onAction="#flip" text="Flip" />
+      <Button fx:id="rotateRightButton" layoutX="834.0" layoutY="281.0" mnemonicParsing="false" onAction="#rotateRight" text="Rotate Right" />
+      <Label fx:id="errorBox" layoutX="670.0" layoutY="526.0" prefHeight="25.0" prefWidth="243.0" />
+      <Label fx:id="p1Score" layoutX="784.0" layoutY="53.0" />
+      <Label fx:id="p2Score" layoutX="784.0" layoutY="74.0" />
+      <Label fx:id="p3Score" layoutX="783.0" layoutY="95.0" />
+      <Label fx:id="p4Score" layoutX="784.0" layoutY="116.0" />
+      <Label layoutX="792.0" layoutY="21.0" text="Score" />
+      <Button fx:id="PassButton" layoutX="748.0" layoutY="600.0" mnemonicParsing="false" onAction="#passCurrentPlayer" prefHeight="31.0" prefWidth="103.0" text="Concede" />
+      <Label fx:id="winnerLabel" layoutX="711.0" layoutY="198.0" prefHeight="31.0" prefWidth="222.0">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="472.0" prefWidth="762.0" style="-fx-background-color: lightgray;" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.SetupController">
+   <children>
+      <Label layoutX="94.0" layoutY="41.0" text="Electro-Blokus Game Setup">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="105.0" layoutY="158.0" text="Number of Players:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="105.0" layoutY="224.0" text="Number of Computer Players:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+     <!-- <Label layoutX="105.0" layoutY="286.0" text="Preferred Tile Color:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label> -->
+      <RadioButton fx:id="onePlayerBtn" layoutX="441.0" layoutY="165.0" mnemonicParsing="false" text="1" onAction="#disableBtns"/>
+      <RadioButton fx:id="twoPlayerBtn" layoutX="515.0" layoutY="165.0" mnemonicParsing="false" text="2" onAction="#disableBtns"/>
+      <RadioButton fx:id="threePlayerBtn" layoutX="587.0" layoutY="165.0" mnemonicParsing="false" text="3" onAction="#disableBtns"/>
+      <RadioButton fx:id="fourPlayerBtn" layoutX="669.0" layoutY="165.0" mnemonicParsing="false" text="4" onAction="#disableBtns"/>
+      <RadioButton fx:id="zeroAIBtn" layoutX="441.0" layoutY="231.0" mnemonicParsing="false" text="0"/>
+      <RadioButton fx:id="oneAIBtn" layoutX="515.0" layoutY="231.0" mnemonicParsing="false" text="1"/>
+      <RadioButton fx:id="twoAIBtn" layoutX="587.0" layoutY="231.0" mnemonicParsing="false" text="2" />
+      <RadioButton fx:id="threeAIBtn" layoutX="659.0" layoutY="231.0" mnemonicParsing="false" text="3" /> 
+      <Button fx:id="resetButton" layoutX="302.0" layoutY="395.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="160.0" onAction="#openMainPage" text="Let's Play!" />
+   </children>
+</AnchorPane>

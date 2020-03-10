@@ -1,0 +1,102 @@
+package gui;
+/**
+ * 
+ * @author person
+ *
+ */
+public class Player {
+	// turn
+	private boolean turn;
+	private boolean firstTurn = true;
+	private int score;
+	private String color;
+	private int[] pieces = {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1};
+	private String playerID;
+	private boolean isAI;
+	private boolean passed = false;
+	
+	public int getScore() {
+		return score;
+	}
+
+	public void setScore(int score) {
+		this.score = score;
+	}
+
+	public String getColor() {
+		return color;
+	}
+
+	public void setColor(String color) {
+		this.color = color;
+	}
+
+	Player(int playerID, boolean isAI){
+		this.isAI = isAI;
+		if (!isAI) {
+			this.playerID = "p" + playerID;
+		} else {
+			this.playerID = "pa" + playerID;
+		}
+		
+		
+	}
+
+	public boolean isAI() {
+		return isAI;
+	}
+	public boolean isTurn() {
+		return turn;
+	}
+
+	public void setTurn(boolean turn) {
+		this.turn = turn;
+	}
+
+	public String getPlayerID() {
+		return playerID;
+	}
+	
+	public boolean isFirstTurn() {
+		return firstTurn;
+	}
+
+	public void setFirstTurn(boolean firstTurn) {
+		this.firstTurn = firstTurn;
+	}
+	
+	public int[] getPieces() {
+		return pieces;
+	}
+	
+	public void resetPieces() {
+		for(int i = 0; i < pieces.length; i++) {
+			pieces[i] = 1;
+		}
+	}
+	
+	public boolean getPassed() {
+		return passed;
+	}
+	
+	public void setPassed(boolean passed) {
+		this.passed = passed;
+	}
+	
+	public boolean checkIfOutOfPieces() {
+		boolean output = true;
+		for(int i = 0; i < pieces.length; i++) {
+			if(pieces[i] > 0) {
+				output = false;
+			}
+		}
+		
+		return output;
+	}
+	
+	public void doubleAmountOfPieces() {
+		for(int i = 0; i < pieces.length; i++) {
+			pieces[i] *= 2;
+		}
+	}
+}

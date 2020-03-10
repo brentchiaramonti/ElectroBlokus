@@ -1,0 +1,133 @@
+package gui;
+
+public class Piece {
+	
+	private int[][] pieceType = new int[5][5];
+	
+	private int[] pointOfReference = new int[2];
+
+	public int[][] getPieceType() {
+		return pieceType;
+	}
+
+	public void setPieceType(int[][] pieceType) {
+		this.pieceType = pieceType;
+	}
+	
+	public void setPointOfReference(int[] pointOfReference) {
+		this.pointOfReference[0] = pointOfReference[0];
+		this.pointOfReference[1] = pointOfReference[1];
+	}
+	
+	public int[] getPointOfReference() {
+		return pointOfReference;
+	}
+	
+	public void rotateLeft() {
+		int[][] tempPiece = new int[5][5];
+		
+		for(int i = 0; i < pieceType.length; i++) {
+			for(int j = 0; j < pieceType[i].length; j++) {
+				tempPiece[4 - j][i] = pieceType[i][j];
+			}
+		}
+		
+		int temp1 = pointOfReference[0];
+		int temp2 = pointOfReference[1];
+		
+		pointOfReference[1] = temp1;
+		pointOfReference[0] = 4 - temp2;
+		
+		pieceType = tempPiece;
+		
+	}
+	
+	public void rotateRight() {
+		int[][] tempPiece = new int[5][5];
+		
+		for(int i = 0; i < pieceType.length; i++) {
+			for(int j = 0; j < pieceType[i].length; j++) {
+				tempPiece[j][4 - i] = pieceType[i][j];
+			}
+		}
+		
+		int temp1 = pointOfReference[0];
+		int temp2 = pointOfReference[1];
+		
+		pointOfReference[1] = 4 - temp1;
+		pointOfReference[0] = temp2;
+		
+		pieceType = tempPiece;
+	}
+	
+	public void flip() {
+		int[][] tempPiece = new int[5][5];
+		
+		for(int i = 0; i < pieceType.length; i++) {
+			for(int j = 0; j < pieceType[i].length; j++) {
+				tempPiece[4 - i][j] = pieceType[i][j];
+			}
+		}
+		
+		int temp1 = pointOfReference[0];
+		int temp2 = pointOfReference[1];
+		
+		pointOfReference[0] = 4 - temp1;
+		pointOfReference[1] = temp2;
+		
+		pieceType = tempPiece;
+	}
+	
+	public int findLeftMost() {
+		
+		int left = 5;
+		for (int i = 0; i < pieceType.length; i++) {
+			for (int j = 0; j < pieceType[i].length; j++) {
+				if (pieceType[i][j] == 1 && j < left) {
+					left = j;
+				}
+			}
+		}
+		return left;
+	}
+
+	public int findRightMost() {
+	
+		int right = -1;
+		for (int i = 0; i < pieceType.length; i++) {
+			for (int j = 0; j < pieceType[i].length; j++) {
+				if (pieceType[i][j] == 1 && j > right) {
+					right = j;
+				}
+			}
+		}
+		return right;
+	}
+
+	public int findTopMost() {
+		
+		int top = 5;
+		for (int i = 0; i < pieceType.length; i++) {
+			for (int j = 0; j < pieceType[i].length; j++) {
+				if (pieceType[i][j] == 1 && i < top) {
+					top = i;
+				}
+			}
+		}
+		return top;
+	}
+
+	public int findBottomMost() {
+	
+		int bottom = -1;
+		for (int i = 0; i < pieceType.length; i++) {
+			for (int j = 0; j < pieceType[i].length; j++) {
+				if (pieceType[i][j] == 1 && i > bottom) {
+					bottom = i;
+				}
+			}
+		}
+		return bottom;
+	}
+
+}

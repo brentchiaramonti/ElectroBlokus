@@ -1,0 +1,9 @@
+package gui;
+
+public class ComputerPlayer extends Player {
+
+	ComputerPlayer(int playerID) {
+		super(playerID,true);
+	}
+	
+}
